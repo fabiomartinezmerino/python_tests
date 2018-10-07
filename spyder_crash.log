@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/Users/Alicia/anaconda3/lib/python3.6/site-packages/spyder/app/mainwindow.py", line 3208, in main
+    mainwindow = run_spyder(app, options, args)
+  File "/Users/Alicia/anaconda3/lib/python3.6/site-packages/spyder/app/mainwindow.py", line 3084, in run_spyder
+    main.setup()
+  File "/Users/Alicia/anaconda3/lib/python3.6/site-packages/spyder/app/mainwindow.py", line 848, in setup
+    from spyder.plugins.editor import Editor
+  File "/Users/Alicia/anaconda3/lib/python3.6/site-packages/spyder/plugins/editor.py", line 41, in <module>
+    from spyder.utils.introspection.manager import IntrospectionManager
+  File "/Users/Alicia/anaconda3/lib/python3.6/site-packages/spyder/utils/introspection/manager.py", line 21, in <module>
+    from spyder.utils.introspection.plugin_client import PluginClient
+  File "/Users/Alicia/anaconda3/lib/python3.6/site-packages/spyder/utils/introspection/plugin_client.py", line 18, in <module>
+    import zmq
+  File "/Users/Alicia/anaconda3/lib/python3.6/site-packages/zmq/__init__.py", line 47, in <module>
+    from zmq import backend
+  File "/Users/Alicia/anaconda3/lib/python3.6/site-packages/zmq/backend/__init__.py", line 40, in <module>
+    reraise(*exc_info)
+  File "/Users/Alicia/anaconda3/lib/python3.6/site-packages/zmq/utils/sixcerpt.py", line 34, in reraise
+    raise value
+  File "/Users/Alicia/anaconda3/lib/python3.6/site-packages/zmq/backend/__init__.py", line 27, in <module>
+    _ns = select_backend(first)
+  File "/Users/Alicia/anaconda3/lib/python3.6/site-packages/zmq/backend/select.py", line 26, in select_backend
+    mod = __import__(name, fromlist=public_api)
+  File "/Users/Alicia/anaconda3/lib/python3.6/site-packages/zmq/backend/cython/__init__.py", line 6, in <module>
+    from . import (constants, error, message, context,
+ImportError: dlopen(/Users/Alicia/anaconda3/lib/python3.6/site-packages/zmq/backend/cython/error.cpython-36m-darwin.so, 2): Library not loaded: @rpath/libsodium.23.dylib
+  Referenced from: /Users/Alicia/anaconda3/lib/libzmq.5.dylib
+  Reason: image not found
