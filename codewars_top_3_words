@@ -1,0 +1,46 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Sep  7 20:41:44 2018
+
+@author: E023222
+"""
+import string
+
+def top_3_words(text):
+    """
+    input:  string representing a test
+    return: an array with three most repeated words
+    """
+    exclude = set("!""#$%&()*+,-./:;<=>?@[\]^_`{|}~")
+    translated_text = (''.join(ch if ch not in exclude else " " for ch in text ))
+    print(translated_text)
+    
+    counter_dict = {}
+    list_of_words = [word.lower() for word in translated_text.split()]
+    
+    
+
+    for word in list_of_words:
+        if word not in counter_dict.keys():
+            counter_dict[word]=1
+        else:
+            counter_dict[word]+=1
+
+    list_of_ordered_words = sorted(counter_dict.keys(), key=counter_dict.get,reverse=True)
+    
+    try:
+        list_of_ordered_words.remove("")
+        
+    except:
+        pass
+    
+    try:
+        list_of_ordered_words.remove("'")
+        
+    except:
+        pass
+    
+    
+    return list_of_ordered_words[0:3]
+
+print(top_3_words("'''"))
